@@ -1,0 +1,90 @@
+.timeline-container {
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+.timeline-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.timeline {
+  position: relative;
+  margin: 2rem 0;
+  padding: 0;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background: #4caf50;
+  transform: translateX(-50%);
+}
+
+.timeline-event {
+  position: relative;
+  width: 50%;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+}
+
+.timeline-event.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-event.right {
+  left: 50%;
+  text-align: left;
+}
+
+.timeline-event .timeline-content {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+.timeline-event h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #4caf50;
+}
+
+.timeline-event h3 {
+  margin: 0.5rem 0 1rem;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.timeline-event p {
+  margin: 0;
+  color: #666;
+  font-size: 1rem;
+}
+
+.timeline-event.left .timeline-content::after,
+.timeline-event.right .timeline-content::after {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  width: 12px;
+  height: 12px;
+  background: #4caf50;
+  border-radius: 50%;
+}
+
+.timeline-event.left .timeline-content::after {
+  right: -6px;
+}
+
+.timeline-event.right .timeline-content::after {
+  left: -6px;
+}
